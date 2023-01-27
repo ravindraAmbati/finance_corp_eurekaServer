@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: eurekaServer
+  config:
+    import: optional:configserver:http://localhost:9050
+  profiles:
+    active: default
+server:
+  port: 9040
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
